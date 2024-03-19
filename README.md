@@ -1,5 +1,5 @@
 ![Build/Test Workflow](https://github.com/sushmavankayala/flight_forecast/actions/workflows/build_test.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/fangyulim/BTS_Flight_Forecast/badge.svg?branch=main)](https://coveralls.io/github/fangyulim/BTS_Flight_Forecast?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/sushmavankayala/flight_forecast/badge.svg?branch=main)](https://coveralls.io/github/sushmavankayala/flight_forecast?branch=main)
 
 <a id="introduction"></a>
 ## Introduction
