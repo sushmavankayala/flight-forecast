@@ -1,0 +1,40 @@
+# In order to build your package, you need to use a "build system".
+# There are a number of supported build systems, but here we'll use
+# the "setuptools" package.
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# The "project" section contains metadata about the project, like
+# the authors and version. Note that the `dynamic` setting here
+# is very important so that the build system packages up your
+# dependencies!
+[project]
+name = "flight_forecast"
+version = "1.0.0"
+authors = [
+    { name="Bruno Carvalho Barreto" },
+    { name="Fang Yu Lim" },
+    { name="Sushma Vankayala" },
+]
+description = "A tool to predict flight delays"
+readme = "README.md"
+requires-python = ">=3.9,<=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pyqt5==5.15",
+    "requests==2.31",
+    "pandas==2.2",
+    "pylint==2.16",
+    "scikit-learn==1.3",
+    "matplotlib==3.8"
+]
+
+# Where can someone find out more about your project?
+[project.urls]
+Homepage = "https://github.com/sushmavankayala/flight_forecast"

@@ -1,0 +1,9 @@
+name: flight_forecast
+channels:
+  - defaults
+dependencies:
+  - python >=3.9,<=3.11 # scikit-learn installation fails for 3.12 python.
+  - pyqt=5
+  - pip
+  - pip:
+      - -r requirements.txt
