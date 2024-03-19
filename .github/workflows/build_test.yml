@@ -61,7 +61,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           # Use the environment name from your environment.yml file
-          activate-environment: BTS_Flight_Forecast
+          activate-environment: flight_forecast
           # The name of the environment file you want conda to use
           environment-file: environment.yml
           # Whether you want conda to automatically update the conda
@@ -87,13 +87,13 @@ jobs:
       # Next step: run pylint. Anything less than 10/10 will fail.
       - name: Lint with pylint
         run: |
-          pylint BTS_Flight_Forecast/**/*.py --extension-pkg-whitelist=PyQt5
+          pylint flight_forecast/**/*.py --extension-pkg-whitelist=PyQt5
 
       # Next step: run the unit tests with code coverage.
       # TODO: check how to write a single discover
       - name: Unit tests
         run: |
-          cd BTS_Flight_Forecast
+          cd flight_forecast
           export QT_QPA_PLATFORM=offscreen
           coverage run -m unittest discover
           coverage report
@@ -105,8 +105,8 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          base-path: BTS_Flight_Forecast
-          path-to-lcov: BTS_Flight_Forecast/coverage.lcov
+          base-path: flight_forecast
+          path-to-lcov: flight_forecast/coverage.lcov
           # The following two options are needed for "parallel"
           # runs - ie if you have a matrix of python versions.
           # This holds off on reporting code coverage to
